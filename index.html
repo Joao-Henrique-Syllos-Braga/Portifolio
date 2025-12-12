@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <title>João Henrique</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <h2 class="company">Sylloto</h2>
+      <div class="nav-links-wrapper">
+        <a href="#home" class="nav-link-item">Home</a>
+        <a href="#projetos" class="nav-link-item">Projetos</a>
+        <a href="#contato" class="nav-link-item">Contato</a>
+      </div>
+      <div class="toggle" id="toggle">
+        <div class="toggle-ball" id="toggle-ball"></div>
+      </div>
+    </nav>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <!-- HERO -->
+        <section class="hero" id="home">
+          <div class="hero-container">
+            <div class="hero-text">
+              <h1 class="hero-title">
+                Oi eu sou o
+                <span class="hero-name-highlight">JOÃO HENRIQUE</span>
+              </h1>
+              <p class="hero-desc">
+                "Desenvolvedor em formação, criando soluções modernas para web"
+              </p>
+            </div>
+            <img
+              class="minhaImagem"
+              src="Imagens/JoaoHenrique.png"
+              alt="Minha imagem"
+            />
+          </div>
+        </section>
+
+        <!-- SOBRE MIM -->
+        <section class="about">
+          <div class="about-container">
+            <h2 class="about-title">SOBRE MIM</h2>
+            <p class="about-text">
+              Meu nome é João Henrique, sou um desenvolvedor iniciante
+              apaixonado por tecnologia e por criar soluções que realmente
+              funcionam. Comecei a estudar programação ainda jovem, explorando
+              HTML, CSS, JavaScript e Python. Hoje, estou expandindo meus
+              conhecimentos em Java e Inteligência Artificial, sempre buscando
+              aprender algo novo. Gosto de transformar ideias em projetos reais,
+              experimentar tecnologias diferentes e evoluir a cada linha de
+              código. Meu objetivo é me tornar um desenvolvedor completo e
+              construir projetos que façam a diferença.
+            </p>
+          </div>
+        </section>
+
+        <!-- LINGUAGENS / SKILLS -->
+        <section class="skills">
+          <div class="skills-container">
+            <h2 class="skills-title">
+              - PRINCIPAIS LINGUAGENS e TECNOLOGIAS -
+            </h2>
+            <div class="skills-list">
+              <div style="background-color: #ff5108" class="skill-tag">
+                HTML
+              </div>
+              <div style="background-color: #264de5" class="skill-tag">CSS</div>
+              <div style="background-color: #f4d800" class="skill-tag">JavaScript</div>
+              <div style="background-color: #E93536" class="skill-tag">Java</div>
+              <div style="background-color: #4A31C1;" class="skill-tag">PHP</div>
+              <div style="background-color: #3E73A0;" class="skill-tag">Python</div>
+              <div style="background-color: #66DBFB;" class="skill-tag">React</div>
+              <div style="background-color: #22262A;" class="skill-tag">Git/GitHub</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section class="projects" id="projetos">
+          <div class="projects-container">
+            <h2 class="projects-title">PROJETOS</h2>
+
+            <div class="carousel">
+              <!-- Radios -->
+              <input type="radio" name="slider" id="slide1" checked />
+              <input type="radio" name="slider" id="slide2" />
+              <input type="radio" name="slider" id="slide3" />
+
+              <!-- Slides -->
+              <div class="carousel-track">
+                <div class="carousel-item">DIV 1</div>
+                <div class="carousel-item">DIV 2</div>
+                <div class="carousel-item">DIV 3</div>
+              </div>
+
+              <!-- Botões -->
+              <div class="carousel-navigation">
+                <!-- Prev -->
+                <label for="slide3" class="nav-btn prev slide1-prev"
+                  >&#10094;</label
+                >
+                <label for="slide1" class="nav-btn prev slide2-prev"
+                  >&#10094;</label
+                >
+                <label for="slide2" class="nav-btn prev slide3-prev"
+                  >&#10094;</label
+                >
+
+                <!-- Next -->
+                <label for="slide2" class="nav-btn next slide1-next"
+                  >&#10095;</label
+                >
+                <label for="slide3" class="nav-btn next slide2-next"
+                  >&#10095;</label
+                >
+                <label for="slide1" class="nav-btn next slide3-next"
+                  >&#10095;</label
+                >
+              </div>
+
+              <!-- Bolinhas -->
+              <div class="carousel-dots">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="contact" id="contato">
+          <div class="contact-form">
+            <input class="name-input" type="text" placeholder="Nome" />
+            <input class="email-input" type="email" placeholder="E-mail" />
+            <textarea class="message-input" placeholder="Mensagem"></textarea>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

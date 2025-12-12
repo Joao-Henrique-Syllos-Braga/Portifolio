@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@keyframes img {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+:root {
+  --cor-clara: #c27aff;
+  --cor-escura: #8200db;
+  --cor-fundo-branco: #e2e8f0;
+  --cor-fundo-azulada: oklch(97% 0.014 254.604);
+  --cor-fundo-navbar: #f1f5f9b0;
+  --fonte-principal: "Poppins";
+  --font-weight-titulos: "Semibold";
+
+  --cor-boxshadow: #c5d7ef;
+  --cor-texto-preto: #2f4263;
+  --cor-titulo-preto: #1a1365;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-preto);
+}
+
+.nav-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--cor-fundo-navbar);
+  width: 100%;
+  height: 80px;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+.company {
+  font-weight: 600;
+}
+
+.nav-links-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.nav-link-item {
+  text-decoration: none;
+  color: var(--cor-titulo-preto);
+  padding: 8px 16px;
+  font-size: 18px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.nav-link-item:hover {
+  background-color: var(--cor-fundo-azulada);
+  transform: translateY(-10px) scale(1.05);
+}
+
+.toggle {
+  background-color: #44444431;
+  width: 64px;
+  height: 32px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 0 4px 0 4px;
+}
+
+.toggle-ball {
+  background-color: var(--cor-fundo-navbar);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.toggle.active .toggle-ball {
+  transform: translateX(30px);
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  height: 800px;
+  justify-content: center;
+}
+
+.hero-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 80px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.hero-text {
+  width: 36%;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.hero-name-highlight {
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--cor-titulo-preto);
+}
+
+.hero-desc {
+  font-size: 22px;
+}
+
+.minhaImagem {
+  display: inline-block;
+  margin-left: 80px;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 4px 4px 10px #3141585a;
+  animation: img 3s ease-in-out infinite alternate;
+}
+
+.about {
+  width: 100%;
+  height: auto;
+  padding: 104px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--cor-fundo-azulada);
+  align-items: center;
+}
+
+.about-container {
+  width: 1000px;
+}
+
+.about-title {
+  color: var(--cor-titulo-preto);
+  font-size: 30px;
+  letter-spacing: 8px;
+}
+
+.about-text {
+  font-size: 22px;
+}
+
+.skills {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 104px;
+}
+
+.skills-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.skills-title {
+  font-size: 30px;
+  color: var(--cor-titulo-preto);
+  margin-bottom: 60px;
+}
+
+.skills-list {
+  margin: auto;
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap; /* permite quebrar linha */
+  gap: 12px; /* distância igual entre os itens */
+  justify-content: center; /* centraliza TODAS as linhas */
+}
+.skill-tag {
+  padding: 10px 24px;
+  background-color: #1a1365;
+  border-radius: 20px;
+  white-space: nowrap;
+  color: var(--cor-fundo-branco);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 2px 2px 6px var(--cor-boxshadow);
+  transition: transform 0.3s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-10px);
+}
+
+.skill-tag img {
+  padding: 0;
+  width: 20px;
+}
+
+.carousel {
+  width: 80%;
+  height: 200px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #222;
+}
+
+/* Esconder os radios */
+.carousel input {
+  display: none;
+}
+
+/* Container dos slides */
+.carousel-track {
+  display: flex;
+  width: 300%; /* 3 slides */
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Cada slide */
+.carousel-item {
+  width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  background: #444;
+}
+
+/* Movimentação dos slides */
+#slide1:checked ~ .carousel-track {
+  transform: translateX(0);
+}
+#slide2:checked ~ .carousel-track {
+  transform: translateX(-100%);
+}
+#slide3:checked ~ .carousel-track {
+  transform: translateX(-200%);
+}
+
+/* Botões (setas) */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.nav-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+/* Esconder todos botões inicialmente */
+.carousel-navigation .nav-btn {
+  display: none;
+}
+
+/* Lógica das setas */
+#slide1:checked ~ .carousel-navigation .slide1-next {
+  display: block;
+}
+#slide2:checked ~ .carousel-navigation .slide2-next {
+  display: block;
+}
+#slide3:checked ~ .carousel-navigation .slide3-next {
+  display: block;
+}
+
+#slide1:checked ~ .carousel-navigation .slide1-prev {
+  display: block;
+}
+#slide2:checked ~ .carousel-navigation .slide2-prev {
+  display: block;
+}
+#slide3:checked ~ .carousel-navigation .slide3-prev {
+  display: block;
+}
+
+/* Bolinhas */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-dots label {
+  width: 15px;
+  height: 15px;
+  background: #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#slide1:checked ~ .carousel-dots label[for="slide1"],
+#slide2:checked ~ .carousel-dots label[for="slide2"],
+#slide3:checked ~ .carousel-dots label[for="slide3"] {
+  background: #fff;
+}
