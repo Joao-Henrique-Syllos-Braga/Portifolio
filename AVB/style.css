@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --cor-azul: #1A0553;
+    --cor-azul-gradiente: #061d7a,#1A0553;
+    --cor-varmelho: #9B0713;
+    --cor-vermelho-gradiente: #9B0713, #e02433;
+    --cor-branco-fundo: #F8F8F8;
+    --cor-preto-texto: #000000b1;
+    --cor-boxes: #f8fafc;
+    --cor-fundo-cinza: #3a3643a2;
+    --cor-whatsapp: #01d001a2;
+    --cor-inputs: #f6f7ff;
+    --box-shadow: 4px 4px 20px #676a6c29;
+    --tempo-hover: 0.3s;
+}
+
+/* -------------------------------------------- */
+/* BODY */
+/* -------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-branco-fundo);
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------------------------------- */
+/* NAVBAR */
+/* -------------------------------------------- */
+
+.nav-bar {
+    background: linear-gradient(45deg, var(--cor-azul-gradiente));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    z-index: 3;
+}
+
+.nav-bar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 450px;
+    max-width: 90%;
+    height: 80px;
+    flex-wrap: wrap;
+}
+
+.nav-bar-links a {
+    color: #F8F8F8;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: background-color var(--tempo-hover) ease;
+    font-size: 1rem;
+}
+
+.nav-bar-links a:hover {
+    background-color: #f8f8f858;
+}
+
+/* -------------------------------------------- */
+/* HOME */
+/* -------------------------------------------- */
+
+.home {
+    display: flex;
+    justify-content: left;
+    align-items: stretch;
+    min-height: 700px;
+    background-image: url(Imagens/Boi.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-text-container {
+    background: linear-gradient(to right, var(--cor-branco-fundo), var(--cor-branco-fundo), #f8f8f800);
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.home-text {
+    width: 40%;
+    margin-left: 24vw;
+}
+
+.home-text h1 {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    color: var(--cor-azul); 
+    margin: 0;
+}
+
+.home-text p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--cor-preto-texto);
+}
+
+.home-text button {
+    padding: 14px 50px;
+    margin-top: 16px;
+    background: linear-gradient(150deg, var(--cor-vermelho-gradiente));
+    color: var(--cor-branco-fundo);
+    border:none;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: background var(--tempo-hover) ease;
+}
+
+.home-text button:hover {
+    background: linear-gradient(150deg, var(--cor-azul-gradiente));
+}
+
+/* -------------------------------------------- */
+/* HR */
+/* -------------------------------------------- */
+
+.hr {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+.hr-azul, .hr-vermelho {
+    width: 100%;
+    height: 100%;
+}
+
+.hr-azul {
+    background-color: var(--cor-azul);
+}
+
+.hr-vermelho {
+    background-color: var(--cor-varmelho);
+}
+
+/* -------------------------------------------- */
+/* BOXES */
+/* -------------------------------------------- */
+
+.home-page {
+    position: relative;
+}
+
+.container-boxes {
+    display: flex;
+    gap: 100px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.container-box {
+    background-color: var(--cor-boxes);
+    width: 400px;
+    max-width: 90vw;
+    min-height: 160px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+    padding: 20px 30px;
+    gap: 20px;
+}
+
+.container-box i {
+    font-size: 30px;
+}
+
+.box-text {
+    width: 70%;
+    padding: 0;
+    margin: 0;
+}
+
+.box-text h1 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.box-text p {
+    margin: 0;
+    color: var(--cor-preto-texto);
+}
+
+/* -------------------------------------------- */
+/* SOBRE */
+/* -------------------------------------------- */
+
+.sobre {
+    background-color: var(--cor-branco-fundo);
+    height: auto;
+}
+
+.sobre-container {
+    width: 50vw;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 16vh;
+    padding: 0 16px;
+}
+
+.sobre-container p {
+    color: var(--cor-preto-texto);
+}
+
+/* -------------------------------------------- */
+/* BOIS */
+/* -------------------------------------------- */
+
+.bois {
+    margin-top: 100px
+}
+
+.boi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-branco-fundo);
+    padding: 60px 16px;
+    background-color: var(--cor-azul);
+    gap: 40px;
+}
+
+.boi:first-of-type {
+    background-color: var(--cor-fundo-cinza);
+}
+
+.boi img{
+    display: block;
+    width: 400px;
+    max-width: 90vw;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.boi div {
+    width: 30vw;
+    max-width: 500px;
+    margin-right: 40px;
+    text-align: right;
+}
+
+.boi div p{
+    margin: 0;
+}
+
+.boi div h1{
+    margin: 0 0 8px 0;
+}
+
+.boi:first-of-type div {
+    margin-left: 40px;
+    margin-right: 0;
+    text-align: left;
+}
+
+/* -------------------------------------------- */
+/* CONTATO */
+/* -------------------------------------------- */
+
+.contato {
+    margin-top: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 16px;
+}
+
+.whatsapp {
+    margin: auto;
+    background-color: var(--cor-whatsapp);
+    width: 260px;
+    max-width: 90vw;
+    height: 100px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+.whatsapp i {
+    font-size: 26px;
+    color: var(--cor-preto-texto);
+}
+
+.whatsapp-text h2{
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--cor-preto-texto);
+}
+
+.whatsapp-text p {
+    margin: 0;
+    color: var(--cor-preto-texto);
+}
+
+form {
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+    max-width: 500px;
+    min-width: 260px;
+    gap: 6px;
+}
+
+form input,
+form textarea {
+    background-color: var(--cor-inputs);
+    border: none;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background: linear-gradient(45deg, var(--cor-azul-gradiente));
+    color: var(--cor-branco-fundo);
+    border: none;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 100px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+form button:hover {
+    background: linear-gradient(45deg, var(--cor-vermelho-gradiente));
+    transition: 1s;
+}
+
+/* ============================================ */
+/*              RESPONSIVIDADE                  */
+/* ============================================ */
+
+/* Tablets / notebooks menores */
+@media (max-width: 1024px) {
+    .home-text {
+        width: 60%;
+        margin-left: 12vw;
+    }
+
+    .container-boxes {
+        gap: 40px;
+    }
+
+    .sobre-container {
+        width: 70vw;
+    }
+
+    .boi div {
+        width: 40vw;
+    }
+}
+
+/* Celulares e tablets pequenos */
+@media (max-width: 768px) {
+
+    /* NAV */
+    .nav-bar {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    .nav-bar-links {
+        height: auto;
+    }
+
+    /* HOME */
+    .home {
+        justify-content: center;
+    }
+
+    .home-text-container {
+        width: 100%;
+        justify-content: center;
+        background: linear-gradient(to bottom, var(--cor-branco-fundo), #f8f8f800);
+        padding: 40px 16px 60px 16px;
+    }
+
+    .home-text {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .home-text p {
+        font-size: 1rem;
+    }
+
+    .home-text button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* BOXES – tira o position absolute e empilha */
+    .container-boxes {
+        position: static;
+        transform: none;
+        margin-top: -40px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+    .container-box {
+        border-radius: 30px;
+    }
+
+    /* SOBRE */
+    .sobre-container {
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    /* BOIS – empilhar imagem e texto */
+    .boi {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 16px;
+    }
+
+    .boi:first-of-type {
+        flex-direction: column;
+    }
+
+    .boi img {
+        margin-bottom: 20px;
+    }
+
+    .boi div,
+    .boi:first-of-type div {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+    /* CONTATO */
+    form {
+        width: 90vw;
+    }
+}
+
+/* Celulares bem pequenos */
+@media (max-width: 480px) {
+    .home-text h1 {
+        font-size: 2.4rem;
+    }
+
+    .container-box {
+        padding: 16px 20px;
+        gap: 12px;
+    }
+
+    .box-text h1 {
+        font-size: 1.1rem;
+    }
+
+    .whatsapp {
+        height: auto;
+        padding: 16px 20px;
+        gap: 20px;
+    }
+}

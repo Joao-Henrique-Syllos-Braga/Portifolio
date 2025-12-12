@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-bar-links">
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#destaques">Destaques</a>
+            <a href="#contato">Contato</a>
+        </div>
+    </nav>
+    <section class="home-page">
+        <section class="home">
+            <div class="home-text-container">
+                <div class="home-text">
+                    <h1>AVB</h1>
+                    <p> Lorem Ipsum é simplesmente uma simulação de texto da indústria 
+                        tipográfica e de impressos, e vem sendo utilizado desde o século XVI, 
+                        quando um impressor desconhecido pegou uma bandeja de tipos e os 
+                        embaralhou para fazer 
+                    </p>
+                    <button>Contatar</button>
+                </div>
+            </div>
+        </section>
+            <div class="hr">
+                <div class="hr-azul"></div>
+                <div class="hr-vermelho"></div>
+            </div>
+            <div class="container-boxes">
+                <div class="container-box">
+                    <div class="box-text">
+                        <h1>Horário de Visitação</h1>
+                        <p>Sábados - Domingos :<br>08:00 - 16:00</p>
+                    </div>
+                    <i class="bi bi-clock"></i>
+                </div>
+                <div class="container-box">
+                    <div class="box-text">
+                        <h1>Endereço</h1>
+                        <p>Moeda<br>Sítio Cantinho do Céu</p>
+                    </div>
+                    <i class="bi bi-map"></i>
+                </div>
+            </div>
+    </section>
+    <section class="sobre" id="sobre">
+        <div class="sobre-container">
+            <h1>Sobre Nós</h1>
+            <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero, escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32.</p>
+            <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero, escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32.</p>
+        </div>
+    </section>
+    <section class="bois" id="destaques">
+        <section class="boi">
+            <img src="Imagens/Boi-ex.jpg" alt="">
+            <div class="container-boi">
+                <h1>Fortuna</h1>
+                <p>O trecho padrão original de Lorem Ipsum, usado desde o século XVI, está reproduzido abaixo para os interessados. Seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" de Cicero também foram reproduzidas abaixo em sua forma exata original, acompanhada das versões para o inglês da tradução feita por H. Rackham em 1914.</p>
+            </div>
+        </section class="bois">
+        <section class="boi">
+            <div class="container-boi">
+                <h1>Fortuna</h1>
+                <p>O trecho padrão original de Lorem Ipsum, usado desde o século XVI, está reproduzido abaixo para os interessados. Seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" de Cicero também foram reproduzidas abaixo em sua forma exata original, acompanhada das versões para o inglês da tradução feita por H. Rackham em 1914.</p>
+            </div>
+            <img src="Imagens/Boi-ex.jpg" alt="">
+        </section>
+    </section>
+    <section class="contato" id="contato">
+        <h1>Contate-me</h1>
+        <div class="whatsapp">
+            <div class="whatsapp-text">
+                <h2>WhatsApp</h2>
+                <p>+11930301092</p>
+            </div>
+            <i class="bi bi-whatsapp"></i>
+        </div>
+
+        <form id="form-contato">
+            <input class="nome" type="text" name="name" placeholder="Digite seu nome" required>
+            <input class="email" type="email" name="email" placeholder="Digite seu email" required>
+
+            <textarea class="texto" cols="30" rows="10" name="message"
+            placeholder="Digite sua mensagem" required></textarea>
+
+            <button class="submit" type="submit">ENVIAR</button>
+        </form>
+        <p id="status"></p>
+    </section>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
+  emailjs.init("1oUd39AU8gAf2JtbL"); 
+</script>
+<script>
+document.getElementById("form-contato").addEventListener("submit", function(e) {
+    e.preventDefault(); // Impede a página de recarregar
+
+    emailjs.sendForm("service_rbatcd9", "template_kic3eka", this)
+        .then(function() {
+            document.getElementById("status").innerText = "Mensagem enviada!";
+        }, function(error) {
+            document.getElementById("status").innerText = "Erro ao enviar.";
+            console.error(error);
+        });
+});
+</script>
+</html>
