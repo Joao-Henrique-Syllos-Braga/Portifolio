@@ -15,8 +15,9 @@
   --cor-fundo-branco: #e2e8f0;
   --cor-fundo-azulada: oklch(97% 0.014 254.604);
   --cor-fundo-navbar: #f1f5f9b0;
+  --cor-fundo-project-container: #fefeff;
   --fonte-principal: "Poppins";
-  --font-weight-titulos: "Semibold";
+
 
   --cor-boxshadow: #c5d7ef;
   --cor-texto-preto: #2f4263;
@@ -39,7 +40,7 @@
   align-items: center;
   background-color: var(--cor-fundo-navbar);
   width: 100%;
-  height: 80px;
+  height: 60px;
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
@@ -213,19 +214,35 @@
     transform: translateY(-10px);
 }
 
-.skill-tag img {
-  padding: 0;
-  width: 20px;
+.projects {
+  background-color: var(--cor-fundo-azulada);
+  width: 100%;
+  height: auto;
+}
+
+.projects-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: top;
+}
+
+.projects-title {
+  margin-top: 80px;
+  font-size: 30px;
+  color: var(--cor-titulo-preto);
 }
 
 .carousel {
   width: 80%;
-  height: 200px;
+  height: 800px;
   margin: 40px auto;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  background: #222;
+  background-color: var(--cor-fundo-azulada);
 }
 
 /* Esconder os radios */
@@ -236,7 +253,7 @@
 /* Container dos slides */
 .carousel-track {
   display: flex;
-  width: 300%; /* 3 slides */
+  width: 100%;
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
@@ -244,14 +261,16 @@
 /* Cada slide */
 .carousel-item {
   width: 100%;
-  flex-shrink: 0;
+  flex: 0 0 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  gap: 50px;
   font-size: 2rem;
   color: white;
-  background: #444;
+  background-color: var(--cor-fundo-azulada);
 }
 
 /* Movimentação dos slides */
@@ -275,6 +294,7 @@
   padding: 10px 15px;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.4);
+  border: none;
   border-radius: 5px;
   transition: 0.3s;
   z-index: 10;
@@ -328,17 +348,29 @@
   z-index: 10;
 }
 
-.carousel-dots label {
+.carousel-dots .dot {
   width: 15px;
   height: 15px;
-  background: #aaa;
   border-radius: 50%;
+  border: 0;
+  background: #aaa;
   cursor: pointer;
   transition: 0.3s;
 }
 
+.carousel-dots .dot.active {
+  background: #fff;
+}
 #slide1:checked ~ .carousel-dots label[for="slide1"],
 #slide2:checked ~ .carousel-dots label[for="slide2"],
 #slide3:checked ~ .carousel-dots label[for="slide3"] {
   background: #fff;
+}
+
+.project-container {
+  width: 300px;
+  height: 500px;
+  background-color: var(--cor-fundo-project-container);
+  box-shadow: 0px 0px 40px var(--cor-boxshadow);
+  border-radius: 8px;
 }

@@ -74,12 +74,22 @@
                 HTML
               </div>
               <div style="background-color: #264de5" class="skill-tag">CSS</div>
-              <div style="background-color: #f4d800" class="skill-tag">JavaScript</div>
-              <div style="background-color: #E93536" class="skill-tag">Java</div>
-              <div style="background-color: #4A31C1;" class="skill-tag">PHP</div>
-              <div style="background-color: #3E73A0;" class="skill-tag">Python</div>
-              <div style="background-color: #66DBFB;" class="skill-tag">React</div>
-              <div style="background-color: #22262A;" class="skill-tag">Git/GitHub</div>
+              <div style="background-color: #f4d800" class="skill-tag">
+                JavaScript
+              </div>
+              <div style="background-color: #e93536" class="skill-tag">
+                Java
+              </div>
+              <div style="background-color: #4a31c1" class="skill-tag">PHP</div>
+              <div style="background-color: #3e73a0" class="skill-tag">
+                Python
+              </div>
+              <div style="background-color: #66dbfb" class="skill-tag">
+                React
+              </div>
+              <div style="background-color: #22262a" class="skill-tag">
+                Git/GitHub
+              </div>
             </div>
           </div>
         </section>
@@ -89,50 +99,39 @@
           <div class="projects-container">
             <h2 class="projects-title">PROJETOS</h2>
 
-            <div class="carousel">
-              <!-- Radios -->
-              <input type="radio" name="slider" id="slide1" checked />
-              <input type="radio" name="slider" id="slide2" />
-              <input type="radio" name="slider" id="slide3" />
+            <div class="carousel" data-carousel>
+              <button class="nav-btn prev" data-prev>&#10094;</button>
 
-              <!-- Slides -->
-              <div class="carousel-track">
-                <div class="carousel-item">DIV 1</div>
-                <div class="carousel-item">DIV 2</div>
-                <div class="carousel-item">DIV 3</div>
+              <div class="carousel-track" data-track>
+                <div class="carousel-item">
+                  <div class="project-container"></div>
+                  <div class="project-container"></div>
+                  <div class="project-container"></div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="project-container"></div>
+                  <div class="project-container"></div>
+                  <div class="project-container"></div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="project-container"></div>
+                  <div class="project-container"></div>
+                  <div class="project-container"></div>
+                </div>
+                <div class="carousel-item">
+                  <div class="project-container"></div>
+                  <div class="project-container"></div>
+                  <div class="project-container"></div>
+                </div>
+
+                <!-- Adicionar mais items -->
               </div>
 
-              <!-- Botões -->
-              <div class="carousel-navigation">
-                <!-- Prev -->
-                <label for="slide3" class="nav-btn prev slide1-prev"
-                  >&#10094;</label
-                >
-                <label for="slide1" class="nav-btn prev slide2-prev"
-                  >&#10094;</label
-                >
-                <label for="slide2" class="nav-btn prev slide3-prev"
-                  >&#10094;</label
-                >
+              <button class="nav-btn next" data-next>&#10095;</button>
 
-                <!-- Next -->
-                <label for="slide2" class="nav-btn next slide1-next"
-                  >&#10095;</label
-                >
-                <label for="slide3" class="nav-btn next slide2-next"
-                  >&#10095;</label
-                >
-                <label for="slide1" class="nav-btn next slide3-next"
-                  >&#10095;</label
-                >
-              </div>
-
-              <!-- Bolinhas -->
-              <div class="carousel-dots">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-              </div>
+              <div class="carousel-dots" data-dots></div>
             </div>
           </div>
         </section>
