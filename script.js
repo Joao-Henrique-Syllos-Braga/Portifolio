@@ -1,10 +1,3 @@
-const toggle = document.getElementById("toggle");
-const toggleBall = document.getElementById("toggle-ball");
-
-toggle.addEventListener("click", () => {
-  toggle.classList.toggle("active");
-});
-
 document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const track = carousel.querySelector("[data-track]");
   const slides = Array.from(track.children);
@@ -50,4 +43,21 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
 
   // inicia
   update();
+});
+
+new Swiper(".logo-swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 40,
+  loop: true,
+
+  speed: 3000,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+  },
+
+  freeMode: true,
+  freeModeMomentum: false,
+
+  allowTouchMove: false,
 });
