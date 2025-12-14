@@ -33,8 +33,9 @@ SplitText.create(".about", {
       scrollTrigger: {
         trigger: ".about",
         start: "0% 80%",
-        end: "50% 50%",
+        end: "30% 50%",
         markers: true,
+        scrub: 1,
       },
       yPercent: 100,
       opacity: 0,
@@ -50,9 +51,10 @@ SplitText.create(".skills-title", {
     gsap.from(self.words, {
       scrollTrigger: {
         trigger: ".skills",
-        start: "30% 80%",
-        end: "50% 50%",
+        start: "20% 80%",
+        end: "40% 50%",
         markers: true,
+        scrub: 1,
       },
       y: 100,
       stagger: 0.05,
@@ -68,9 +70,10 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".skills",
-      start: "40% 80%",
-      end: "60% 50%",
+      start: "30% 80%",
+      end: "40% 50%",
       markers: true,
+      scrub: 1,
     },
     y: 0,
     opacity: 1,
@@ -79,3 +82,85 @@ gsap.fromTo(
     clearProps: "transform",
   }
 );
+
+SplitText.create(".projects-title", {
+  type: "words",
+  onSplit(self) {
+    gsap.from(self.words, {
+      scrollTrigger: {
+        trigger: ".projects",
+        start: "5%, 80%",
+        end: "15% 50%",
+        markers: true,
+        scrub: 1,
+      },
+      y: 100,
+      duration: 0.5,
+      opacity: 0,
+    });
+  },
+});
+
+gsap.from(".carousel", {
+  scrollTrigger: {
+    trigger: ".projects",
+    start: "7%, 80%",
+    end: "16% 50%",
+    markers: true,
+    scrub: 1,
+  },
+  duration: 0.5,
+  opacity: 0,
+});
+
+SplitText.create(".contact-title", {
+  type: "words",
+  onSplit(self) {
+    gsap.set(self.words, {
+      color: "var(--text-inverse)",
+    });
+    gsap.from(self.words, {
+      scrollTrigger: {
+        trigger: ".contact",
+        start: "10%, 80%",
+        end: "30% 50%",
+        markers: true,
+        scrub: 1,
+      },
+      y: 100,
+      duration: 0.5,
+      opacity: 0,
+    });
+  },
+});
+
+gsap.fromTo(
+  ".rede",
+  { y: 100, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: ".contact",
+      start: "10% 80%",
+      end: "30% 50%",
+      markers: true,
+      scrub: 1,
+    },
+    y: 0,
+    opacity: 1,
+    duration: 0.5,
+    stagger: 0.05,
+    clearProps: "transform",
+  }
+);
+
+gsap.from(".contact-form", {
+  scrollTrigger: {
+    trigger: ".contact",
+    start: "10%, 80%",
+    end: "30% 50%",
+    markers: true,
+    scrub: 1,
+  },
+  duration: 1,
+  opacity: 0,
+});
