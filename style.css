@@ -3,14 +3,7 @@
 /* ===================== */
 /* ANIMAÇÕES */
 /* ===================== */
-@keyframes float {
-  from {
-    transform: translateY(10px);
-  }
-  to {
-    transform: translateY(-10px);
-  }
-}
+
 
 /* ===================== */
 /* VARIÁVEIS */
@@ -222,8 +215,9 @@
   color: var(--text-inverse);
   border-radius: 20px;
   font-size: 16px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  white-space: nowrap;
   justify-content: center;
   box-shadow: var(--shadow-default);
   transition: transform 0.3s ease;
