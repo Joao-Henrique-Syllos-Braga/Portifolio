@@ -18,7 +18,7 @@
 
   /* Texto */
   --text-primary: #0d131c;
-  --text-title: #0a0728c8;
+  --text-title: #15163d;
   --text-inverse: #e2e8f0;
 
   /* Backgrounds */
@@ -52,6 +52,7 @@
 /* ===================== */
 /* NAVBAR */
 /* ===================== */
+
 .nav-bar {
   position: fixed;
   width: 100%;
@@ -72,12 +73,12 @@
 
 .nav-links-wrapper {
   display: flex;
-  gap: 32px;
+  gap: 10px;
 }
 
 .nav-link-item {
   text-decoration: none;
-  font-size: 18px;
+  font-size: clamp(0.6rem, 3vw, 1.2rem);
   padding: 8px 16px;
   border-radius: 20px;
   color: var(--text-title);
@@ -94,7 +95,7 @@
 /* ===================== */
 .hero {
   width: 100%;
-  height: 800px;
+  height: 90vh;
   display: flex;
   justify-content: center;
 }
@@ -112,13 +113,15 @@
 }
 
 .hero-title {
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 500;
+  line-height: 1.2;
   letter-spacing: -2px;
 }
 
 .hero-name-highlight {
-  font-size: 46px;
+  white-space: nowrap;
+  font-size: clamp(28px, 6vw, 46px);
   font-weight: 700;
   color: var(--text-title);
 }
@@ -128,8 +131,8 @@
 }
 
 .minhaImagem {
-  width: 500px;
-  height: 500px;
+  width: 60vh;
+  height: 60vh;
   margin-left: 80px;
   border-radius: 50%;
   object-fit: cover;
@@ -447,14 +450,17 @@
 }
 
 .project-container {
-  width: 70%;
-  height: 750px;
+  width: 100%;
+  max-width: 900px;
   background-color: var(--bg-card);
   box-shadow: var(--shadow-strong);
-  border-radius: 8px;
-  display: grid;
-  grid-template-rows: 2fr 1fr;
+  border-radius: 12px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
 }
+
 
 .project-img {
   width: 100%;
@@ -487,11 +493,26 @@
   justify-self: right;
 }
 
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+}
+
+.project-view {
+  padding: 22px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .project-tags {
   display: flex;
   gap: 8px;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  margin-top: 16px;
 }
+
 
 .project-tag {
   flex: 0 1 auto;
@@ -507,11 +528,17 @@
   color: var(--text-inverse);
   font-size: 16px;
   text-align: left;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   padding: 8px 24px;
   border-radius: 10px;
-  justify-self: right;
+  justify-self: left;
+  margin:20px;
+}
+
+.project-mais-container {
+  justify-self: left;
 }
 
 .project-mais:hover {
@@ -526,13 +553,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--text-inverse);
 }
+
 
 .contact-title {
   margin-top: 80px;
   margin-bottom: 20px;
   font-size: 30px;
   font-weight: 500;
+  color: var(--text-inverse);
+}
+
+.contact-title,
+.contact-title * {
   color: var(--text-inverse);
 }
 
@@ -662,5 +696,191 @@
   background-color: #0d131c;
   i {
     color: var(--text-inverse);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 80%;
+  }
+
+  .minhaImagem {
+    margin: 40px 0 0 0;
+    width: 40vh;
+    height: 40vh;
+  }
+
+  .project-content {
+    grid-template-columns: 2fr 1fr;
+  }
+  .project-tags {
+  display: flex;
+  gap: 8px;
+}
+.project-mais{
+  margin: 20px 30px;
+}
+  .skills-container {
+    width: 70%;
+  }
+
+  .project-container {
+    width: 85%;
+  }
+
+  .carousel {
+    height: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .nav-bar {
+    grid-template-columns: auto auto;
+    padding: 0 20px;
+  }
+
+  .nav-links-wrapper {
+    display: none;
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-name-highlight {
+    font-size: 36px;
+  }
+
+  .hero-desc {
+    font-size: 18px;
+  }
+
+  /* ABOUT */
+  .about-container {
+    width: 90%;
+  }
+
+  .about-text {
+    font-size: 18px;
+  }
+
+  /* SKILLS */
+  .skills-container {
+    width: 90%;
+  }
+
+  /* PROJECTS */
+  .carousel {
+    width: 95%;
+    height: auto;
+  }
+
+  .carousel-item {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-container {
+    height: auto;
+    grid-template-rows: auto;
+  }
+
+  .project-content {
+    grid-template-columns: 1fr;
+  }
+
+  .project-view {
+    justify-self: start;
+    padding-top: 0;
+  }
+  .project-mais{
+  margin: 20px 30px;
+}
+
+  /* CONTACT */
+  .contact-form {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /* HERO */
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-name-highlight {
+    font-size: 30px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+  }
+
+  .minhaImagem {
+    width: 30vh;
+    height: 30vh;
+  }
+
+  /* TITLES */
+  .about-title,
+  .skills-title,
+  .projects-title,
+  .contact-title {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+
+  /* TAGS */
+  .skill-tag,
+  .project-tag {
+    font-size: 14px;
+    height: 38px;
+    padding: 8px 16px;
+  }
+
+  /* SOCIAL */
+  .redes-sociais {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  /* CAROUSEL */
+  .nav-btn {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .project-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .project-view {
+    width: 100%;
+    padding: 16px 30px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+    .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .project-tag {
+    font-size: 14px;
+    padding: 6px 14px;
   }
 }

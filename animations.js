@@ -1,166 +1,177 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
+/* ============================= */
+/* SCROLL SMOOTHER (DESKTOP ONLY) */
+/* ============================= */
 ScrollSmoother.create({
-  smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
-  effects: true, // looks for data-speed and data-lag attributes on elements
-  smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+  smooth: 1,
+  effects: true,
+  smoothTouch: false // desliga smoothing em touch (muito importante)
 });
 
+/* ============================= */
+/* HERO IMAGE */
+/* ============================= */
 gsap.from(".minhaImagem", {
-  yPercent: 20,
+  y: 60,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+
+/* ============================= */
+/* HERO TEXT */
+/* ============================= */
+const heroSplit = new SplitText(".hero-title, .hero-desc", {
+  type: "words"
+});
+
+gsap.from(heroSplit.words, {
+  yPercent: 100,
   opacity: 0,
   stagger: 0.05,
   duration: 1,
+  ease: "power3.out"
 });
 
-SplitText.create(".hero", {
-  type: "chars, words",
-  autoSplit: true,
-  onSplit(self) {
-    gsap.from(self.words, {
-      yPercent: 100,
-      opacity: 0,
-      stagger: 0.05,
-      duration: 1,
-    });
+/* ============================= */
+/* ABOUT */
+/* ============================= */
+const aboutSplit = new SplitText(".about-text", {
+  type: "words"
+});
+
+gsap.from(aboutSplit.words, {
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
   },
+  y: 60,
+  opacity: 0,
+  stagger: 0.02,
+  duration: 0.6,
+  ease: "power2.out"
 });
 
-SplitText.create(".about", {
-  type: "words",
-  onSplit(self) {
-    gsap.from(self.words, {
-      scrollTrigger: {
-        trigger: ".about",
-        start: "0% 80%",
-        end: "30% 50%",
-        markers: true,
-        scrub: 1,
-      },
-      yPercent: 100,
-      opacity: 0,
-      stagger: 0.02,
-      duration: 0.2,
-    });
+/* ============================= */
+/* SKILLS TITLE */
+/* ============================= */
+const skillsTitleSplit = new SplitText(".skills-title", {
+  type: "words"
+});
+
+gsap.from(skillsTitleSplit.words, {
+  scrollTrigger: {
+    trigger: ".skills",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
   },
+  y: 60,
+  opacity: 0,
+  stagger: 0.05,
+  duration: 0.6,
+  ease: "power2.out"
 });
 
-SplitText.create(".skills-title", {
-  type: "words",
-  onSplit(self) {
-    gsap.from(self.words, {
-      scrollTrigger: {
-        trigger: ".skills",
-        start: "20% 80%",
-        end: "40% 50%",
-        markers: true,
-        scrub: 1,
-      },
-      y: 100,
-      stagger: 0.05,
-      opacity: 0,
-      duration: 0.5,
-    });
+/* ============================= */
+/* SKILLS TAGS */
+/* ============================= */
+gsap.from(".skill-tag", {
+  scrollTrigger: {
+    trigger: ".skills-list",
+    start: "top 85%",
+    toggleActions: "play none none reverse"
   },
+  y: 40,
+  opacity: 0,
+  stagger: 0.05,
+  duration: 0.5,
+  ease: "power2.out"
 });
 
-gsap.fromTo(
-  ".skill-tag",
-  { y: 100, opacity: 0 },
-  {
-    scrollTrigger: {
-      trigger: ".skills",
-      start: "30% 80%",
-      end: "40% 50%",
-      markers: true,
-      scrub: 1,
-    },
-    y: 0,
-    opacity: 1,
-    duration: 0.5,
-    stagger: 0.05,
-    clearProps: "transform",
-  }
-);
-
-SplitText.create(".projects-title", {
-  type: "words",
-  onSplit(self) {
-    gsap.from(self.words, {
-      scrollTrigger: {
-        trigger: ".projects",
-        start: "5%, 80%",
-        end: "15% 50%",
-        markers: true,
-        scrub: 1,
-      },
-      y: 100,
-      duration: 0.5,
-      opacity: 0,
-    });
-  },
+/* ============================= */
+/* PROJECTS TITLE */
+/* ============================= */
+const projectsTitleSplit = new SplitText(".projects-title", {
+  type: "words"
 });
 
-gsap.from(".carousel", {
+gsap.from(projectsTitleSplit.words, {
   scrollTrigger: {
     trigger: ".projects",
-    start: "7%, 80%",
-    end: "16% 50%",
-    markers: true,
-    scrub: 1,
+    start: "top 80%",
+    toggleActions: "play none none reverse"
   },
-  duration: 0.5,
+  y: 60,
   opacity: 0,
+  stagger: 0.05,
+  duration: 0.6,
+  ease: "power2.out"
 });
 
-SplitText.create(".contact-title", {
-  type: "words",
-  onSplit(self) {
-    gsap.set(self.words, {
-      color: "var(--text-inverse)",
-    });
-    gsap.from(self.words, {
-      scrollTrigger: {
-        trigger: ".contact",
-        start: "10%, 80%",
-        end: "30% 50%",
-        markers: true,
-        scrub: 1,
-      },
-      y: 100,
-      duration: 0.5,
-      opacity: 0,
-    });
+/* ============================= */
+/* CAROUSEL */
+/* ============================= */
+gsap.from(".carousel", {
+  scrollTrigger: {
+    trigger: ".carousel",
+    start: "top 85%",
+    toggleActions: "play none none reverse"
   },
+  opacity: 0,
+  y: 40,
+  duration: 0.6,
+  ease: "power2.out"
 });
 
-gsap.fromTo(
-  ".rede",
-  { y: 100, opacity: 0 },
-  {
-    scrollTrigger: {
-      trigger: ".contact",
-      start: "10% 80%",
-      end: "30% 50%",
-      markers: true,
-      scrub: 1,
-    },
-    y: 0,
-    opacity: 1,
-    duration: 0.5,
-    stagger: 0.05,
-    clearProps: "transform",
-  }
-);
+/* ============================= */
+/* CONTACT TITLE */
+/* ============================= */
+const contactSplit = new SplitText(".contact-title", {
+  type: "words"
+});
 
-gsap.from(".contact-form", {
+gsap.from(contactSplit.words, {
   scrollTrigger: {
     trigger: ".contact",
-    start: "10%, 80%",
-    end: "30% 50%",
-    markers: true,
-    scrub: 1,
+    start: "top 80%",
+    toggleActions: "play none none reverse"
   },
-  duration: 1,
+  y: 60,
   opacity: 0,
+  stagger: 0.05,
+  duration: 0.6,
+  ease: "power2.out"
+});
+
+/* ============================= */
+/* SOCIAL ICONS */
+/* ============================= */
+gsap.from(".rede-contact", {
+  scrollTrigger: {
+    trigger: ".contact",
+    start: "top 75%",
+    toggleActions: "play none none reverse"
+  },
+  y: 40,
+  opacity: 0,
+  stagger: 0.1,
+  duration: 0.5,
+  ease: "power2.out"
+});
+
+/* ============================= */
+/* CONTACT FORM */
+/* ============================= */
+gsap.from(".contact-form", {
+  scrollTrigger: {
+    trigger: ".contact-form",
+    start: "top 85%",
+    toggleActions: "play none none reverse"
+  },
+  y: 40,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power3.out"
 });
