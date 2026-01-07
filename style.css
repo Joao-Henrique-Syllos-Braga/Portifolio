@@ -79,7 +79,7 @@
 
 .nav-link-item {
   text-decoration: none;
-  font-size: clamp(0.6rem, 3vw, 1.2rem);
+  font-size: clamp(0.6rem, 3vw, 1.0em);
   padding: 8px 16px;
   border-radius: 20px;
   color: var(--text-title);
@@ -645,7 +645,8 @@
 /* ===================== */
 .redes-sociais {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, max-content);
+  overflow-x: auto;
   gap: 6px;
 }
 
@@ -879,6 +880,10 @@
   .nav-btn {
     font-size: 1.5rem;
   }
+
+}
+
+@meida (max-width: 390px) {
 
 }
 
