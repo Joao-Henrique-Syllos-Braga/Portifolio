@@ -3,7 +3,9 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 /* ============================= */
 /* SCROLL SMOOTHER (DESKTOP ONLY) */
 /* ============================= */
-ScrollSmoother.create({
+
+// Guarda a instância do ScrollSmoother
+const smoother = ScrollSmoother.create({
   smooth: 1,
   effects: true,
   smoothTouch: false // desliga smoothing em touch (muito importante)
@@ -174,4 +176,28 @@ gsap.from(".contact-form", {
   opacity: 0,
   duration: 0.8,
   ease: "power3.out"
+});
+
+/* ============================= */
+/* ANCORAS COM SCROLL SUAVE */
+/* ============================= */
+
+// Scroll suave para links internos sem quebrar o ScrollTrigger
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = link.getAttribute("href");
+    smoother.scrollTo(target, true);
+  });
+});
+
+/* ============================= */
+/* SUPORTE PARA LINK DIRETO COM HASH */
+/* EX: seusite.com/#contact */
+/* ============================= */
+
+window.addEventListener("load", () => {
+  if (window.location.hash) {
+    smoother.scrollTo(window.location.hash, true);
+  }
 });
