@@ -124,7 +124,7 @@
   letter-spacing: -2px;
 }
 
-.hero-name-highlight {
+.hero-name-highlight, .hero-name-highlight * {
   white-space: nowrap;
   font-size: clamp(28px, 6vw, 46px);
   font-weight: 700;
@@ -166,7 +166,7 @@
 }
 
 .about-container {
-  width: 1000px;
+  width: 80%;
 }
 
 .about-title {
@@ -176,7 +176,7 @@
 }
 
 .about-text {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 /* ===================== */
@@ -202,6 +202,10 @@
 .skills-title {
   font-size: 30px;
   margin: 20px 0;
+  color: var(--text-title);
+}
+
+.skills-title *{
   color: var(--text-title);
 }
 
@@ -313,15 +317,19 @@
 }
 
 .projects-title {
-  margin-top: 80px;
+  margin-top: 20px;
   font-size: 30px;
+  color: var(--text-title);
+}
+
+.projects-title * {
   color: var(--text-title);
 }
 
 .carousel {
   width: 80%;
-  height: 800px;
-  margin: 40px auto;
+  height: auto;
+  margin: 20px auto 40px;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
@@ -433,6 +441,7 @@
 
 .carousel-dots .dot {
   width: 15px;
+  margin-top: 20px;
   height: 15px;
   border-radius: 50%;
   border: 0;
@@ -455,7 +464,7 @@
 }
 
 .project-container {
-  width: 100%;
+  width: 90%;
   max-width: 900px;
   background-color: var(--bg-card);
   box-shadow: var(--shadow-strong);
@@ -488,7 +497,7 @@
 
 .project-desc {
   margin: 0;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .project-view {
@@ -647,6 +656,7 @@
   display: grid;
   grid-template-columns: repeat(3, max-content);
   overflow-x: auto;
+  overflow-y: hidden;
   gap: 6px;
 }
 
