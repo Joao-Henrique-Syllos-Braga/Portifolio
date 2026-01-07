@@ -69,6 +69,7 @@
 
 .company {
   font-weight: 600;
+  font-size: 22px;
 }
 
 .nav-links-wrapper {
@@ -170,7 +171,7 @@
 
 .about-title {
   font-size: 30px;
-  letter-spacing: 8px;
+  letter-spacing: -0.9px;
   color: var(--text-title);
 }
 
@@ -562,8 +563,8 @@
 
 
 .contact-title {
-  margin-top: 80px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 8px;
   font-size: 30px;
   font-weight: 500;
   color: var(--text-inverse);
@@ -645,18 +646,18 @@
 .redes-sociais {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 10px;
+  gap: 6px;
 }
 
 .rede {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  gap: 2px;
+  gap: 1px;
   box-shadow: var(--shadow-default);
 }
 
@@ -704,6 +705,18 @@
 }
 
 @media (max-width: 1024px) {
+  .about-title, .skills-title, .projects-title, .contact-title {
+    font-size: 24px;
+  }
+  .nav-link-item {
+    font-size: 16px;
+  }
+  .company {
+    white-space: nowrap;
+  }
+  .about-container {
+    width: 80%;
+  }
   .hero-container {
     flex-direction: column;
     text-align: center;
@@ -768,6 +781,9 @@
 
   .hero-desc {
     font-size: 18px;
+  }
+  .company {
+    display: block;
   }
 
   /* ABOUT */
@@ -863,6 +879,7 @@
   .nav-btn {
     font-size: 1.5rem;
   }
+
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
