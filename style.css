@@ -136,8 +136,8 @@
 }
 
 .minhaImagem {
-  width: 60vh;
-  height: 60vh;
+  width: 60vw;
+  height: 60vw;
   margin-left: 80px;
   border-radius: 50%;
   object-fit: cover;
@@ -472,12 +472,6 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-
-
-.project-img {
-  width: 100%;
-  height: auto;
 }
 
 .project-content {
