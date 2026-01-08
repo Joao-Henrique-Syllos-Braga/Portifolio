@@ -169,7 +169,7 @@ gsap.from(".rede-contact", {
 gsap.from(".contact-form", {
   scrollTrigger: {
     trigger: ".contact-form",
-    start: "top 85%",
+    start: "top 95%",
     toggleActions: "play none none reverse"
   },
   y: 40,
