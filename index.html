@@ -1,246 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <title>João Henrique</title>
+</head>
+<body>
 
-    <title>João Henrique</title>
-  </head>
-  <body>
-    <nav class="nav-bar">
-      <h2 class="company">João Henrique</h2>
-      <div class="nav-links-wrapper">
-        <a href="#home" class="nav-link-item">Home</a>
-        <a href="#projetos" class="nav-link-item">Projetos</a>
-        <a href="#skills" class="nav-link-item">Habilidades</a>
-        <a href="#contato" class="nav-link-item">Contato</a>
-      </div>
-      <div class="redes-sociais redes-nav">
-        <a class="rede instagram" target="_blank">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a class="rede whatsapp" target="_blank">
-          <i class="bi bi-whatsapp"></i>
-          +11930301092
-        </a>
-        <a class="rede github" href="https://github.com/Joao-Henrique-Syllos-Braga" target="_blank">
-          <i class="bi bi-github"></i>
-        </a>
-      </div>
-    </nav>
+  <!-- NAVBAR -->
+  <nav class="nav-bar">
+    <h2 class="company">João Henrique</h2>
 
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <!-- HERO -->
-        <section class="hero" id="home">
-          <div class="hero-container">
-            <div class="hero-text">
-              <h1 class="hero-title">
-                Oi eu sou o
-                <span class="hero-name-highlight">JOÃO HENRIQUE</span>
-              </h1>
-              <p class="hero-desc">
-                "Desenvolvedor em formação, criando soluções modernas para web"
-              </p>
-            </div>
-            <img
-              class="minhaImagem"
-              src="Imagens/JoaoHenrique.png"
-              alt="Minha imagem"
-            />
-          </div>
-        </section>
-
-        <!-- SOBRE MIM -->
-        <section class="about">
-          <div class="about-container">
-            <h2 class="about-title">SOBRE MIM</h2>
-            <p class="about-text">
-              Meu nome é <strong>João Henrique</strong> tenho 15 anos, sou um
-              desenvolvedor iniciante apaixonado por tecnologia e por criar
-              soluções que realmente funcionam. Comecei a estudar programação há
-              <strong>3 anos</strong>, explorando <strong>HTML</strong>,
-              <strong>CSS</strong>, <strong>JavaScript</strong> e
-              <strong>Python</strong>. Hoje, estou expandindo meus conhecimentos
-              em <strong>Java</strong> e
-              <strong>Inteligência Artificial</strong>, sempre buscando aprender
-              algo novo. Gosto de transformar ideias em projetos reais,
-              experimentar tecnologias diferentes e evoluir a cada linha de
-              código. Meu objetivo é me tornar um desenvolvedor completo e
-              construir projetos que façam a diferença.
-            </p>
-          </div>
-        </section>
-
-        <!-- LINGUAGENS / SKILLS -->
-        <section class="skills" id="skills">
-
-          <!-- CONTEÚDO CENTRAL -->
-          <div class="skills-container">
-            <h2 class="skills-title">
-              —TECNOLOGIAS —
-            </h2>
-
-            <div class="skills-list">
-              <a
-                href="#html"
-                class="skill-tag"
-                style="background-color: #e44d26"
-                >HTML</a
-              >
-              <a href="#css" class="skill-tag" style="background-color: #264de4"
-                >CSS</a
-              >
-              <a href="#js" class="skill-tag" style="background-color: #e7c726"
-                >JavaScript</a
-              >
-              <a
-                href="#java"
-                class="skill-tag"
-                style="background-color: #b32624"
-                >Java</a
-              >
-              <a href="#php" class="skill-tag" style="background-color: #5a4fcf"
-                >PHP</a
-              >
-              <a
-                href="#python"
-                class="skill-tag"
-                style="background-color: #306998"
-                >Python</a
-              >
-              <a
-                href="#react"
-                class="skill-tag"
-                style="background-color: #3fa9c7"
-                >React</a
-              >
-              <a href="#git" class="skill-tag" style="background-color: #2b2f33"
-                >Git / GitHub</a
-              >
-            </div>
-          </div>
-
-          <!-- LOOP INFERIOR (sentido oposto) -->
-        </section>
-
-        <!-- PROJETOS -->
-        <section class="projects" id="projetos">
-          <div class="projects-container">
-            <h2 class="projects-title">PROJETOS</h2>
-
-            <div class="carousel" data-carousel>
-              <button class="nav-btn prev" data-prev>&#10094;</button>
-
-              <div class="carousel-track" data-track>
-                <div class="carousel-item">
-                  <div class="project-container">
-                    <img
-                      class="project-img"
-                      src="Imagens/Projetos/avb-img.png"
-                      alt=""
-                    />
-                    <div class="project-content">
-                      <div class="project-text">
-                        <h1 class="project-title">AVB</h1>
-                        <p class="project-desc">
-                          Site criado para a empresa agropecuaria AVB, com o
-                          objetivo de ser um landingpage. Sendo usadas as
-                          linguagens mais simples possiveis
-                        </p>
-                      </div>
-                      <div class="project-view">
-                        <div class="project-tags">
-                          <a
-                            href="#html"
-                            class="project-tag"
-                            style="background-color: #e44d26"
-                          >
-                            HTML
-                          </a>
-
-                          <div
-                            style="background-color: #264de4"
-                            class="project-tag"
-                          >
-                            CSS
-                          </div>
-                          <div
-                            style="background-color: #e7c726"
-                            class="project-tag"
-                          >
-                            JavaScript
-                          </div>
-                          <div
-                            style="background-color: #2b2f33"
-                            class="project-tag"
-                          >
-                            Git/GitHub
-                          </div>
-                        </div>
-                      </div class="project-mais-container">
-                      <a class="project-mais" href="AVB/index.html"
-                        >Veja Mais</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <!-- 
-                <div class="carousel-item">
-                  <div class="project-container"></div>
-                </div>
-                 -->
-                <!-- Adicionar mais items -->
-              </div>
-
-              <button class="nav-btn next" data-next>&#10095;</button>
-
-              <div class="carousel-dots" data-dots></div>
-            </div>
-          </div>
-        </section>
-
-        <!-- CONTATO -->
-        <section class="contact" id="contato">
-          <h2 class="contact-title split-text">Contate-me</h2>
-          <div class="redes-sociais">
-            <div class="rede-contact instagram insta">
-              <i class="bi bi-instagram"></i>
-            </div>
-            <div class="rede-contact whatsapp whats">
-              <i class="bi bi-whatsapp"></i>
-              +11930301092
-            </div>
-            <div class="rede-contact github git"  href="https://github.com/Joao-Henrique-Syllos-Braga" target="_blank">
-              <i class="bi bi-github"></i>
-            </div>
-          </div>
-          <form action="" class="contact-form">
-            <input class="name-input" type="text" placeholder="Nome" />
-            <input class="email-input" type="email" placeholder="E-mail" />
-            <textarea class="message-input" placeholder="Mensagem"></textarea>
-            <button class="contact-submit" type="submit">Enviar</button>
-          </form>
-        </section>
-      </div>
+    <div class="nav-links-wrapper">
+      <a href="#home" class="nav-link-item">Home</a>
+      <a href="#projetos" class="nav-link-item">Projetos</a>
+      <a href="#skills" class="nav-link-item">Habilidades</a>
+      <a href="#contato" class="nav-link-item">Contato</a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script src="animations.js"></script>
-  </body>
+    <div class="redes-sociais redes-nav">
+      <a class="rede instagram" href="https://instagram.com" target="_blank">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a class="rede whatsapp" href="https://wa.me/5511930301092" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+        +11930301092
+      </a>
+      <a class="rede github" href="https://github.com/Joao-Henrique-Syllos-Braga" target="_blank">
+        <i class="bi bi-github"></i>
+      </a>
+    </div>
+  </nav>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              Oi eu sou o
+              <span class="hero-name-highlight">JOÃO HENRIQUE</span>
+            </h1>
+            <p class="hero-desc">
+              "Desenvolvedor em formação, criando soluções modernas para web"
+            </p>
+          </div>
+
+          <img
+            class="minhaImagem"
+            src="./Imagens/JoaoHenrique.png"
+            alt="Minha imagem"
+          />
+        </div>
+      </section>
+
+      <!-- SOBRE -->
+      <section class="about">
+        <div class="about-container">
+          <h2 class="about-title">SOBRE MIM</h2>
+          <p class="about-text">
+            Meu nome é <strong>João Henrique</strong>, tenho 15 anos, sou um
+            desenvolvedor iniciante apaixonado por tecnologia e por criar
+            soluções que realmente funcionam. Comecei a estudar programação há
+            <strong>3 anos</strong>, explorando <strong>HTML</strong>,
+            <strong>CSS</strong>, <strong>JavaScript</strong> e
+            <strong>Python</strong>. Hoje, estou expandindo meus conhecimentos
+            em <strong>Java</strong> e
+            <strong>Inteligência Artificial</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="skills" id="skills">
+        <div class="skills-container">
+          <h2 class="skills-title">— TECNOLOGIAS —</h2>
+
+          <div class="skills-list">
+            <a href="#" class="skill-tag" style="background-color:#e44d26">HTML</a>
+            <a href="#" class="skill-tag" style="background-color:#264de4">CSS</a>
+            <a href="#" class="skill-tag" style="background-color:#e7c726">JavaScript</a>
+            <a href="#" class="skill-tag" style="background-color:#b32624">Java</a>
+            <a href="#" class="skill-tag" style="background-color:#5a4fcf">PHP</a>
+            <a href="#" class="skill-tag" style="background-color:#306998">Python</a>
+            <a href="#" class="skill-tag" style="background-color:#3fa9c7">React</a>
+            <a href="#" class="skill-tag" style="background-color:#2b2f33">Git / GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section class="projects" id="projetos">
+        <div class="projects-container">
+          <h2 class="projects-title">PROJETOS</h2>
+
+          <div class="carousel" data-carousel>
+            <button class="nav-btn prev" data-prev>&#10094;</button>
+
+            <div class="carousel-track" data-track">
+              <div class="carousel-item">
+                <div class="project-container">
+
+                  <img
+                    class="project-img"
+                    src="./Imagens/Projetos/avb-img.png"
+                    alt="Projeto AVB"
+                  />
+
+                  <div class="project-content">
+                    <div class="project-text">
+                      <h1 class="project-title">AVB</h1>
+                      <p class="project-desc">
+                        Site criado para a empresa agropecuária AVB, como landing page.
+                      </p>
+                    </div>
+
+                    <div class="project-view">
+                      <div class="project-tags">
+                        <div class="project-tag" style="background-color:#e44d26">HTML</div>
+                        <div class="project-tag" style="background-color:#264de4">CSS</div>
+                        <div class="project-tag" style="background-color:#e7c726">JavaScript</div>
+                        <div class="project-tag" style="background-color:#2b2f33">Git/GitHub</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-mais-container">
+                    <a class="project-mais" href="./AVB/index.html">Veja Mais</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <button class="nav-btn next" data-next>&#10095;</button>
+            <div class="carousel-dots" data-dots></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section class="contact" id="contato">
+        <h2 class="contact-title split-text">Contate-me</h2>
+
+        <div class="redes-sociais">
+          <a class="rede-contact instagram" href="https://instagram.com" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a class="rede-contact whatsapp" href="https://wa.me/5511930301092" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+
+          <a class="rede-contact github" href="https://github.com/Joao-Henrique-Syllos-Braga" target="_blank">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+
+        <!-- <form class="contact-form">
+          <input class="name-input" type="text" placeholder="Nome" />
+          <input class="email-input" type="email" placeholder="E-mail" />
+          <textarea class="message-input" placeholder="Mensagem"></textarea>
+          <button class="contact-submit" type="submit">Enviar</button>
+        </form> -->
+      </section>
+
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="./script.js"></script>
+  <script src="./animations.js"></script>
+
+</body>
 </html>

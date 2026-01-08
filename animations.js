@@ -153,7 +153,7 @@ gsap.from(contactSplit.words, {
 gsap.from(".rede-contact", {
   scrollTrigger: {
     trigger: ".contact",
-    start: "top 75%",
+    start: "top 100%",
     toggleActions: "play none none reverse"
   },
   y: 40,

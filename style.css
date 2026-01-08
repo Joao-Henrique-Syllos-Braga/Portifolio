@@ -42,6 +42,7 @@
 /* RESET */
 /* ===================== */
 * {
+  touch-action: manipulation;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -532,11 +533,11 @@
   text-decoration: none;
   background-color: var(--text-title);
   color: var(--text-inverse);
-  font-size: 12px;
+  font-size: 16px;
   text-align: left;
   display: flex;
   align-items: center;
-  padding: 8px 24px;
+  padding: 10px 30px;
   margin: 0px 20px 20px;
   border-radius: 10px;
   justify-self: left;
@@ -650,6 +651,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   gap: 6px;
+  margin-bottom: 60px;
 }
 
 .rede {
