@@ -543,6 +543,7 @@
   display: flex;
   align-items: center;
   padding: 8px 24px;
+  margin: 0px 20px 20px;
   border-radius: 10px;
   justify-self: left;
 }
@@ -716,11 +717,16 @@
   .about-title, .skills-title, .projects-title, .contact-title {
     font-size: 24px;
   }
+  .nav-bar{
+    display: flex;
+    align-items: center;
+  }
   .nav-link-item {
     font-size: 16px;
   }
   .company {
     white-space: nowrap;
+    display: none;
   }
   .about-container {
     width: 80%;
