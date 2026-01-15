@@ -203,6 +203,7 @@
 .skills-title {
   font-size: 30px;
   color: var(--text-title);
+  margin-bottom: 30px;
 }
 
 .skills-title *{

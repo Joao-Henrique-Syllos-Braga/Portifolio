@@ -105,54 +105,89 @@
       </section>
 
       <!-- PROJETOS -->
-      <section class="projects" id="projetos">
-        <div class="projects-container">
-          <h2 class="projects-title">PROJETOS</h2>
+<section class="projects" id="projetos">
+  <div class="projects-container">
+    <h2 class="projects-title">PROJETOS</h2>
 
-          <div class="carousel" data-carousel>
-            <button class="nav-btn prev" data-prev>&#10094;</button>
+    <div class="carousel" data-carousel>
 
-            <div class="carousel-track" data-track">
-              <div class="carousel-item">
-                <div class="project-container">
+  <!-- INPUTS NECESSÁRIOS (NÃO ALTERAM VISUAL) -->
+  <input type="radio" name="carousel" id="slide1" checked>
+  <input type="radio" name="carousel" id="slide2">
 
-                  <img
-                    class="project-img"
-                    src="./Imagens/Projetos/avb-img.png"
-                    alt="Projeto AVB"
-                  />
+  <button class="nav-btn prev" data-prev>&#10094;</button>
 
-                  <div class="project-content">
-                    <div class="project-text">
-                      <h1 class="project-title">AVB</h1>
-                      <p class="project-desc">
-                        Site criado para a empresa agropecuária AVB, como landing page.
-                      </p>
-                    </div>
+  <div class="carousel-track" data-track>
 
-                    <div class="project-view">
-                      <div class="project-tags">
-                        <div class="project-tag" style="background-color:#e44d26">HTML</div>
-                        <div class="project-tag" style="background-color:#264de4">CSS</div>
-                        <div class="project-tag" style="background-color:#e7c726">JavaScript</div>
-                        <div class="project-tag" style="background-color:#2b2f33">Git/GitHub</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="project-mais-container">
-                    <a class="project-mais" href="./AVB/index.html">Veja Mais</a>
-                  </div>
-
-                </div>
-              </div>
+    <!-- SLIDE 1 -->
+    <div class="carousel-item">
+      <div class="project-container">
+        <img
+          class="project-img"
+          src="./Imagens/Projetos/avb-img.png"
+          alt="Projeto AVB"
+        />
+        <div class="project-content">
+          <div class="project-text">
+            <h1 class="project-title">AVB</h1>
+            <p class="project-desc">
+              Site criado para a empresa agropecuária AVB, como landing page.
+            </p>
+          </div>
+          <div class="project-view">
+            <div class="project-tags">
+              <div class="project-tag" style="background-color:#e44d26">HTML</div>
+              <div class="project-tag" style="background-color:#264de4">CSS</div>
+              <div class="project-tag" style="background-color:#e7c726">JavaScript</div>
+              <div class="project-tag" style="background-color:#2b2f33">Git/GitHub</div>
             </div>
-
-            <button class="nav-btn next" data-next>&#10095;</button>
-            <div class="carousel-dots" data-dots></div>
           </div>
         </div>
-      </section>
+        <div class="project-mais-container">
+          <a class="project-mais" href="./AVB/index.html" target="_blank">Veja Mais</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="carousel-item">
+      <div class="project-container">
+        <img
+          class="project-img"
+          src="./Imagens/Projetos/dentista-img.png"
+          alt="Projeto AVB"
+        />
+        <div class="project-content">
+          <div class="project-text">
+            <h1 class="project-title">Dentista</h1>
+            <p class="project-desc">
+              Site criado como exemplo de um site de uma clinica odontologica
+            </p>
+          </div>
+          <div class="project-view">
+            <div class="project-tags">
+              <div class="project-tag" style="background-color:#e44d26">HTML</div>
+              <div class="project-tag" style="background-color:#264de4">CSS</div>
+              <div class="project-tag" style="background-color:#e7c726">JavaScript</div>
+              <div class="project-tag" style="background-color:#2b2f33">Git/GitHub</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-mais-container">
+          <a class="project-mais" href="./Dentista-exemplo/index.html" target="_blank">Veja Mais</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="nav-btn next" data-next>&#10095;</button>
+  <div class="carousel-dots" data-dots></div>
+</div>
+
+  </div>
+</section>
+
 
       <!-- CONTATO -->
       <section class="contact" id="contato">

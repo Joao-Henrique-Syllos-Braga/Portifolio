@@ -4,6 +4,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 /* SCROLL SMOOTHER (DESKTOP ONLY) */
 /* ============================= */
 
+
+
 // Guarda a instância do ScrollSmoother
 const smoother = ScrollSmoother.create({
   smooth: 1,
@@ -47,7 +49,8 @@ gsap.from(aboutSplit.words, {
   scrollTrigger: {
     trigger: ".about",
     start: "top 80%",
-    toggleActions: "play none none reverse"
+    toggleActions: "play none none reverse",
+
   },
   y: 60,
   opacity: 0,
@@ -89,7 +92,8 @@ gsap.from(".skill-tag", {
   opacity: 0,
   stagger: 0.05,
   duration: 0.5,
-  ease: "power2.out"
+  ease: "power2.out",
+  clearProps: "transform"
 });
 
 /* ============================= */
@@ -137,7 +141,7 @@ const contactSplit = new SplitText(".contact-title", {
 gsap.from(contactSplit.words, {
   scrollTrigger: {
     trigger: ".contact",
-    start: "top 80%",
+    start: "top 100%",
     toggleActions: "play none none reverse"
   },
   y: 60,
