@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.page {
+  --cor1: #004877;
+  --cor2: #40707b;
+  --cor3: #9eb9c2;
+  --cor4: #9eb9c2;
+  --cor-fundo1: #f8fafc;
+  --cor-fundo2: #9eb9c24d;
+  --fonte1: "Poppins", sans-serif;
+  --text: #00000099;
+  --text-size: 16px;
+
+  background-color: var(--cor-fundo1);
+  font-family: var(--fonte1);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVBAR */
+.navBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 2rem;
+  background-color: #dde7eb;
+  padding: 1rem;
+  border-radius: 26px;
+}
+
+.navLink {
+  color: var(--text);
+  text-decoration: none;
+  font-size: var(--text-size);
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  transition: 0.2s;
+}
+
+.navLink:hover {
+  background-color: var(--cor4);
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--cor-fundo2);
+  padding: 2rem;
+  gap: 2rem;
+  position: relative;
+}
+
+.heroContainer {
+  width: max-content;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bolas {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.bola1 {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--cor3);
+}
+
+.heroTitle {
+  color: var(--cor1);
+  font-size: clamp(20px, 4vw, 32px);
+  width: max-content;
+}
+
+.heroText {
+  font-size: clamp(12px, 3vw, 16px);
+  width: min(800px, 50vw);
+}
+
+.heroLinks {
+  width: max-content;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  text-decoration: none;
+}
+
+.btn1 {
+  background-color: var(--cor2);
+  color: var(--cor-fundo1);
+  transition: 0.2s;
+}
+
+.btn1:hover {
+  background-color: var(--cor3);
+}
+
+.btn2 {
+  color: var(--cor2);
+}
+
+.heroImgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  height: clamp(340px, 22vw, 800px);
+  width: clamp(340px, 22vw, 800px);
+}
+
+.heroImgContainer > * {
+  position: absolute;
+}
+
+.heroImg {
+  width: auto;
+  height: clamp(300px, 20vw, 700px);
+}
+
+.bolaGrande {
+  position: absolute;
+  height: clamp(340px, 22vw, 800px);
+  width: clamp(340px, 22vw, 800px);
+  background-color: var(--cor2);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.bola {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--cor3);
+}
+
+.circulo1 {
+  top: 20%;
+  right: 10%;
+}
+
+.circulo2 {
+  bottom: 15%;
+  left: 15%;
+}
+
+.circulo3 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.bola2 {
+  top: 60%;
+  right: 5%;
+}
+
+/* BENEFICIOS */
+.beneficios {
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.bnefTitle {
+  font-weight: normal;
+}
+
+.bnefHighlight {
+  font-weight: bold;
+  color: var(--cor2);
+}
+
+.bnefCards {
+  width: max-content;
+  display: grid;
+  grid-template-columns: 260px 260px 260px 260px;
+  gap: 2rem;
+}
+
+.bnefCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.bnefSvg {
+  height: 80px;
+}
+
+.bnefCard h2 {
+  color: var(--cor2);
+}
+
+/* SERVICOS */
+.servicos {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--cor-fundo2);
+  padding: 2rem;
+}
+
+.srvTitle {
+  font-weight: bold;
+  color: var(--cor2);
+}
+
+.srvCards {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 380px 380px 380px;
+  gap: 2rem;
+}
+
+.srvCard {
+  background-color: var(--cor-fundo1);
+  border-radius: 21px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.srvCardContainer {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.srvImg {
+  width: 100%;
+  height: auto;
+  border-radius: 21px 21px 0 0;
+}
+
+.srvCardTitle {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.79);
+}
+
+.srvCardBtn {
+  padding: 0.5rem 1rem;
+  width: max-content;
+  border-radius: 16px;
+  border: none;
+  justify-self: right;
+  background-color: var(--cor2);
+  color: var(--cor-fundo1);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.srvCardBtn:hover {
+  background-color: var(--cor3);
+}
+
+/* SOBRE */
+.sobre {
+  background-color: var(--cor-fundo1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 4rem;
+}
+
+.sobre h1 {
+  color: var(--cor2);
+}
+
+.sobreTitle {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.sobreText {
+  color: var(--text);
+  font-size: 16px;
+}
+
+.sobreContainer {
+  padding: 1rem;
+  width: min(1000px, 90vw);
+}
+
+/* DEPOIMENTOS */
+.depoimentos {
+  width: 100%;
+  height: auto;
+  background-color: var(--cor-fundo2);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dpTitle {
+  margin-top: 2rem;
+  font-weight: normal;
+}
+
+.dpCards {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  gap: 2rem;
+}
+
+.dpCard {
+  background-color: var(--cor-fundo1);
+  padding: 2rem;
+  border-radius: 32px;
+  display: flex;
+}
+
+.dpCardContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.dpCardTitle {
+  color: black;
+  font-size: 20px;
+}
+
+.dpCardText {
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.dpCardContainer i {
+  color: var(--cor1);
+  font-size: 20px;
+}
+
+/* AGENDAR */
+.agendar {
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agendarContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.agendarTitle {
+  color: var(--cor1);
+  font-size: 36px;
+}
+
+.agendarBtn {
+  padding: 1rem 2rem;
+  background-color: var(--cor2);
+  color: var(--cor-fundo1);
+  text-decoration: none;
+  font-weight: bolder;
+  border-radius: 1rem;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+
+.agendarBtn:hover {
+  background-color: var(--cor3);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1228px) {
+  .srvCards {
+    grid-template-columns: 380px 380px;
+  }
+}
+
+@media (max-width: 1028px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .heroTextContainer {
+    margin-top: 4rem;
+  }
+
+  .heroContainer {
+    margin-bottom: 120px;
+  }
+
+  .heroImgContainer {
+    margin-bottom: 180px;
+  }
+
+  .bola {
+    display: none;
+  }
+
+  .heroText {
+    font-size: clamp(12px, 3vw, 16px);
+    width: min(800px, 70vw);
+  }
+
+  .beneficios {
+    height: auto;
+  }
+
+  .bnefCards {
+    grid-template-columns: 200px 200px;
+  }
+
+  .bnefCard h2 {
+    font-size: 20px;
+  }
+
+  .dpCards {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 390px;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .srvCards {
+    grid-template-columns: 380px;
+  }
+
+  .agendarContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  .agendarBtn {
+    width: 70vw;
+    text-align: center;
+  }
+}

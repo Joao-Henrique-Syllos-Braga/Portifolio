@@ -1,0 +1,89 @@
+.contact {
+  background-color: var(--bg-page);
+  width: 100%;
+  padding: 80px 0 100px;
+  border-top: 1px solid var(--border);
+}
+
+.contactContent {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.contactLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+}
+
+.contactLabel {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.contactTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-title);
+  line-height: 1.2;
+}
+
+.contactText {
+  font-size: 15px;
+  color: var(--text);
+  opacity: 0.6;
+  line-height: 1.7;
+}
+
+.contactRight {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .contactTitle {
+    font-size: 28px;
+  }
+
+  .contactContent {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+  }
+
+  .contact {
+    padding: 60px 0 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactTitle {
+    font-size: 24px;
+  }
+
+  .contactText {
+    font-size: 13px;
+  }
+
+  .contactContent {
+    padding: 0 16px;
+  }
+
+  .contact {
+    padding: 50px 0 70px;
+  }
+}

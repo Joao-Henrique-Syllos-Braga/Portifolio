@@ -1,0 +1,106 @@
+.hero {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-page);
+}
+
+.heroContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.heroText {
+  width: 36%;
+}
+
+.heroTitle {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -2px;
+  color: var(--text);
+}
+
+.heroNameHighlight,
+.heroNameHighlight * {
+  white-space: nowrap;
+  font-size: clamp(28px, 6vw, 46px);
+  font-weight: 700;
+  color: var(--text-title);
+}
+
+.heroDesc {
+  font-size: 22px;
+  color: var(--text);
+  opacity: 0.6;
+  margin-top: 12px;
+}
+
+.minhaImagem {
+  width: 60vh;
+  height: 60vh;
+  margin-left: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 4px 4px 32px rgba(91, 134, 255, 0.15);
+  animation: float 3s ease-in-out infinite alternate;
+}
+
+@media (max-width: 1024px) {
+  .heroContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heroText {
+    width: 80%;
+  }
+
+  .minhaImagem {
+    margin: 40px 0 20px 0;
+    width: 40vh;
+    height: 40vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .heroNameHighlight {
+    font-size: 36px;
+  }
+
+  .heroDesc {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 24px;
+  }
+
+  .heroNameHighlight {
+    font-size: 40px;
+  }
+
+  .heroDesc {
+    font-size: 14px;
+  }
+
+  .minhaImagem {
+    width: 40vh;
+    height: 40vh;
+  }
+}
